@@ -241,3 +241,21 @@
 // 		printf("不是闰年\n");
 // 	return 0;
 // }
+int fac(int n)
+{
+	int sum=1;
+	if(n == 1)
+	sum=1;
+	else
+	{
+		sum = n * fac(n - 1);}
+	return sum;
+}
+int main()
+{
+	int n = 0;
+	scanf("%d", &n);
+	int ret = fac(n);
+	printf("%d\n", ret);
+	return 0;
+}
