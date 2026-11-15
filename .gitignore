@@ -1,0 +1,23 @@
+# 编译产物
+*.exe
+*.o
+*.obj
+*.out
+a.out
+*.pdb
+*.ilk
+
+# Visual Studio
+.vs/
+x64/
+Debug/
+Release/
+ipch/
+*.user
+*.suo
+
+# VS Code
+.vscode/
+
+# 其他
+*.log
