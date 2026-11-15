@@ -241,21 +241,41 @@
 // 		printf("不是闰年\n");
 // 	return 0;
 // }
-int fac(int n)
+// int fac(int n)
+// {
+// 	int sum=1;
+// 	if(n == 1)
+// 	sum=1;
+// 	else
+// 	{
+// 		sum = n * fac(n - 1);}
+// 	return sum;
+// }
+// int main()
+// {
+// 	int n = 0;
+// 	scanf("%d", &n);
+// 	int ret = fac(n);
+// 	printf("%d\n", ret);
+// 	return 0;
+// }
+int fabna(int x)
 {
-	int sum=1;
-	if(n == 1)
-	sum=1;
+	if (x == 1 || x == 2)
+		return 1;
 	else
-	{
-		sum = n * fac(n - 1);}
-	return sum;
+		return fabna(x - 1) + fabna(x - 2);
 }
 int main()
 {
-	int n = 0;
-	scanf("%d", &n);
-	int ret = fac(n);
-	printf("%d\n", ret);
+	int n=0;
+	scanf("%d",&n);
+	int sum=0;
+	for(int i=1;i<=n;i++)
+	{
+		int b=fabna(i);
+		sum+=b;
+	}
+	printf("%d",sum);
 	return 0;
 }
